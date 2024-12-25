@@ -197,6 +197,49 @@
 		width: 24rem;
 		margin: 0 auto;
 	}
+	.welcome-to-ibadat-established img.to-ibadat-img {
+		right: 10%;
+		bottom: -7%;
+	}
+	.ayat-txt {
+		width: 61rem;
+	}
+	.video_wrapper {
+		width: 100%;
+		height: 42rem;
+		border-radius: 5rem;
+	}
+	.about_area {
+		padding: 8rem 0 2rem;
+	}
+	.islam_pillars_area {
+		padding: 0rem 0 10rem;
+	}
+	.col-cus {
+		-ms-flex: 0 0 50%;
+		flex: 0 0 50%;
+		max-width: 50%;
+	}
+	.pillar_wrap {
+		height: 62rem;
+		padding: 15rem 1rem;
+		margin-bottom: 4rem;
+	}
+	.pillar_wrap h3 {
+		font-size: 3.5rem;
+	}
+	.service_cart {
+		height: 43rem;
+	}
+	.pillars_card {
+		padding: 4rem 3rem;
+		background-color: var(--dark_blue);
+	}
+	.f_logo {
+		width: 45rem !important;
+		margin: 0 auto !important;
+		display: flex;
+	}
 	
 }
 
