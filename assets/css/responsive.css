@@ -179,8 +179,11 @@
 		padding: 4rem 3rem;
 	}
 	.footer_top {
-		justify-content: center;
-		flex-wrap: wrap;
+		-webkit-box-pack: center;
+		    -ms-flex-pack: center;
+		        justify-content: center;
+		-ms-flex-wrap: wrap;
+		    flex-wrap: wrap;
 	}
 	.namaz_area::before {
 		display: none;
@@ -217,7 +220,8 @@
 	}
 	.col-cus {
 		-ms-flex: 0 0 50%;
-		flex: 0 0 50%;
+		-webkit-box-flex: 0;
+		        flex: 0 0 50%;
 		max-width: 50%;
 	}
 	.pillar_wrap {
@@ -238,6 +242,8 @@
 	.f_logo {
 		width: 45rem !important;
 		margin: 0 auto !important;
+		display: -webkit-box;
+		display: -ms-flexbox;
 		display: flex;
 	}
 	

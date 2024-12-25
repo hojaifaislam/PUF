@@ -131,6 +131,7 @@ main {
 	        justify-content: center;
 }
 .sun {
+  background: -o-radial-gradient(circle, rgba(14,69,43,1) 0%, rgba(156,203,59,1) 100%);
   background: radial-gradient(circle, rgba(14,69,43,1) 0%, rgba(156,203,59,1) 100%);
   height: 50px;
   width: 50px;
@@ -157,6 +158,8 @@ main {
   left: 23px;
   height: 20px;
   width: 20px;
+  background: -webkit-gradient(linear, left top, left bottom, from(#00ff00), color-stop(#09f), to(#09f));
+  background: -o-linear-gradient(#00ff00, #09f, #09f);
   background: linear-gradient(#00ff00, #09f, #09f);
   -webkit-animation: rotation 1s infinite linear;
   animation: rotation 1s infinite linear;
@@ -165,6 +168,7 @@ main {
   left: 49px;
   height: 17px;
   width: 17px;
+  background: -o-radial-gradient(circle, rgba(202,228,214,1) 0%, rgba(156,203,59,1) 100%);
   background: radial-gradient(circle, rgba(202,228,214,1) 0%, rgba(156,203,59,1) 100%);
 }
 .orbit {
@@ -182,20 +186,17 @@ main {
   height: 100px;
   width: 100px;
   -webkit-animation: rotation 2s infinite linear;
-  -moz-animation: rotation 2s infinite linear;
   animation: rotation 2s infinite linear;
 }
 .orbit2 {
   height: 150px;
   width: 150px;
   -webkit-animation: rotation 3s infinite linear;
-  -moz-animation: rotation 3s infinite linear;
   animation: rotation 3s infinite linear;
 }
 .orbit3 {
   height: 200px;
   width: 200px;
-  -moz-animation: rotation 6s infinite linear;
   -webkit-animation: rotation 6s infinite linear;
   animation: rotation 6s infinite linear;
 }
@@ -210,18 +211,12 @@ main {
 }
 @keyframes rotation {
   from {
-    transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
   }
   to {
-    transform: rotate(359deg);
-  }
-}
-@-moz-keyframes rotation {
-  from {
-    -moz-transform: rotate(0deg);
-  }
-  to {
-    -moz-transform: rotate(359deg);
+    -webkit-transform: rotate(359deg);
+            transform: rotate(359deg);
   }
 }
 
@@ -755,7 +750,8 @@ footer::before {
 .inner_home img{
 	width: 7rem;
 	margin-bottom: 2rem;
-	filter: brightness(0) invert(1);
+	-webkit-filter: brightness(0) invert(1);
+	        filter: brightness(0) invert(1);
 }
 .inner_home h2{
 	color: #fff;
@@ -815,9 +811,16 @@ footer::before {
 	background-size: cover;
 	height: 50rem;
 	padding: 2rem;
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	justify-content: end;
-	flex-direction: column;
+	-webkit-box-pack: end;
+	    -ms-flex-pack: end;
+	        justify-content: end;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
 	position: relative;
 	z-index: 1;
 	border-radius: 1rem;
@@ -832,6 +835,8 @@ footer::before {
 	top: 0;
 	width: 100%;
 	height: 100%;
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#0000004f), to(#025C49));
+	background-image: -o-linear-gradient(top, #0000004f 0%, #025C49 100%);
 	background-image: linear-gradient(180deg, #0000004f 0%, #025C49 100%);
 	z-index: -1;
 }
@@ -1081,7 +1086,8 @@ footer::before {
 }
 .ibadat_islam{
 	height: 50rem;
-	object-fit: cover;
+	-o-object-fit: cover;
+	   object-fit: cover;
 }
 /*------------- community_area ---------*/
 .community_area{
@@ -1124,15 +1130,18 @@ footer::before {
   
   .our-best-team-content.v1 .team-img:hover img {
 	-webkit-transform: scale(1.1);
-	transform: scale(1.1);
+	-ms-transform: scale(1.1);
+	    transform: scale(1.1);
   }
   
   .our-best-team-content.v1 .team-img img {
 	width: 100%;
 	-webkit-transition: all 0.4s ease;
+	-o-transition: all 0.4s ease;
 	transition: all 0.4s ease;
 	height: 57rem;
-	object-fit: cover;
+	-o-object-fit: cover;
+	   object-fit: cover;
   }
   
   .our-best-team-content.v1 .team-img .team-content {
@@ -1177,6 +1186,7 @@ footer::before {
 	-ms-flex-direction: column;
 	flex-direction: column;
 	-webkit-transition: all 0.4s ease;
+	-o-transition: all 0.4s ease;
 	transition: all 0.4s ease;
 	overflow: hidden;
   }
@@ -1206,6 +1216,7 @@ footer::before {
   
   .our-best-team-content.v1 .team-img .team-content .team-share-box ul {
 	-webkit-transition: all 0.4s ease;
+	-o-transition: all 0.4s ease;
 	transition: all 0.4s ease;
 	position: absolute;
 	top: -17.1rem;
@@ -1214,7 +1225,9 @@ footer::before {
 	overflow: hidden;
 	opacity: 0;
 	display: block;
-	transform: translateY(8.0rem);
+	-webkit-transform: translateY(8.0rem);
+	    -ms-transform: translateY(8.0rem);
+	        transform: translateY(8.0rem);
 	z-index: -1;
   }
   
@@ -1266,7 +1279,8 @@ footer::before {
   
   .our-best-team-content.v1 .team-img .team-content .team-share-box:hover ul {
 	-webkit-transform: translateY(0);
-	transform: translateY(0);
+	-ms-transform: translateY(0);
+	    transform: translateY(0);
 	opacity: 1;
 	display: block;
 	z-index: 0;
@@ -1283,7 +1297,8 @@ footer::before {
     text-align: center;
 }
 .pillars_cont>img{
-	filter: brightness(0) invert(1);
+	-webkit-filter: brightness(0) invert(1);
+	        filter: brightness(0) invert(1);
 }
 .pillars_cont h3{
 	color: #fff;
@@ -1478,7 +1493,8 @@ footer::before {
 	        align-items: center;
 }
 .donate_line{
-	filter: brightness(0) invert(1);
+	-webkit-filter: brightness(0) invert(1);
+	        filter: brightness(0) invert(1);
 }
 .bank_wrap img,
 .bkash_wrap img {
@@ -1710,7 +1726,8 @@ footer::before {
   }
   .col-cus{
     -ms-flex: 0 0 20%;
-    flex: 0 0 20%;
+    -webkit-box-flex: 0;
+            flex: 0 0 20%;
     max-width: 20%;
 }
 .pillar_wrap{
@@ -1719,10 +1736,19 @@ footer::before {
 	background-position: top bottom;
 	height: 30rem;
 	text-align: center;
-	flex-direction: column;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	justify-content: end;
-	align-items: center;
+	-webkit-box-pack: end;
+	    -ms-flex-pack: end;
+	        justify-content: end;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
 	padding: 5rem 1rem;
 }
 .pillar_wrap h3{
@@ -1731,9 +1757,15 @@ footer::before {
 	color: #606060;
 }
 .pillar_img_wrap{
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	column-gap: 1rem;
-	align-items: center;
+	-webkit-column-gap: 1rem;
+	   -moz-column-gap: 1rem;
+	        column-gap: 1rem;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
 }
 .pillar_img_wrap img{
 	width: 26rem;
